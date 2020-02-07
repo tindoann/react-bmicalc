@@ -24,23 +24,23 @@ class Input extends Component {
     let result = ( ( weight / ( height * height ) ) * 10000 ).toFixed(1);
 
     if ( result < 15 ) {
-        this.setState({resultMsg: 'Very severely underweight'});
+        this.setState({message: 'Very severely underweight'});
     } else if ( result > 15 && result <= 16 ) {
-        this.setState({resultMsg: 'Severely underweight'});
+        this.setState({message: 'Severely underweight'});
     } else if ( result > 16 && result <= 18.5 ) {
-        this.setState({resultMsg: 'Underweight'});
+        this.setState({message: 'Underweight'});
     } else if ( result > 18.5 && result <= 25 ) {
-        this.setState({resultMsg: 'Normal (healthy weight)'});
+        this.setState({message: 'Normal (healthy weight)'});
     } else if ( result > 25 && result <= 30 ) {
-        this.setState({resultMsg: 'Overweight'});
+        this.setState({message: 'Overweight'});
     } else if ( result > 30 && result <= 35 ) {
-        this.setState({resultMsg: 'Moderately obese'});
+        this.setState({message: 'Moderately obese'});
     } else if ( result > 35 && result <= 40 ) {
-        this.setState({resultMsg: 'Severely obese'});
+        this.setState({message: 'Severely obese'});
     } else if ( result > 40 ) {
-        this.setState({resultMsg: 'Very severely obese'});
+        this.setState({message: 'Very severely obese'});
     } else {
-        this.setState({resultMsg: 'NA'});
+        this.setState({message: 'NA'});
     }
 
     this.setState({result: result});
@@ -67,7 +67,7 @@ render() {
                   <div className="form-group">
                   <label className="control-label col-sm-2">Result:</label>
                   <div className="col-sm-10">
-                    <ResultComponent result={this.state.result} resultMsg={this.state.resultMsg}></ResultComponent>
+                    <ResultComponent result={this.state.result} message={this.state.message}></ResultComponent>
                   </div>
                 </div>
                 <div className="form-group">
