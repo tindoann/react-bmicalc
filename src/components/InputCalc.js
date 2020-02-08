@@ -22,7 +22,7 @@ class Input extends Component {
   // function to calculate BMI
   calculateBMI = e => {
   // deconstructing object - let height = this.state.height
-    let {height, weight} = this.state;
+    let { height, weight } = this.state;
     let result = ( ( weight / ( height * height ) ) * 10000 ).toFixed(1);
   
   // condition to calculate the bmi which returns a message
@@ -45,7 +45,8 @@ class Input extends Component {
       } else {
           this.setState({message: 'Try Again'});
       }
-
+    
+    // calc the results 
     this.setState({result: result});
 }
 
