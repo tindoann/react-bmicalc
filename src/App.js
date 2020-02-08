@@ -1,7 +1,7 @@
 import React, { Component } from 'react'; 
 import './App.css'; 
 
-import InputComponent from './components/InputCalc'; 
+import Input from './components/InputCalc'; 
 
 class App extends Component {
 
@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div>
         <div>
-          <InputCalc></InputCalc>
+          <Input></Input>
         </div>
       </div>
     ); 
